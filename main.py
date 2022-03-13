@@ -1,7 +1,7 @@
 import os
 
 def start():
-    inp = input("Suchen, Schreiben oder Aktualiesieren? \n >>> ")
+    inp = input("Suchen oder Schreiben? \n >>> ")
     
     if inp == 'r':
        search()
@@ -11,7 +11,7 @@ def start():
         write()
     
     if inp == 'u':
-        update()
+        pass
 
 
 
@@ -20,7 +20,7 @@ def search():
         
     try:
         f = open(f'Data\{inp}.txt', 'r')
-        
+        os.system('cls')
         print(f.read())
         
     except:
@@ -51,8 +51,7 @@ def write():
         f.write(f"Mail. {inp} \n")
     
 
-def update():
-    pass
+
 
 
 
